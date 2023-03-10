@@ -1,0 +1,115 @@
+.sign-in-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sign-in-design {
+  background-color: #f0f3ff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 10%;
+  padding-left: 10%;
+}
+
+.sign-in-image {
+  height: 60%;
+  width: auto;
+  /* background-color: aqua; */
+}
+
+.sign-in-image img {
+  object-fit: contain;
+  height: 100%;
+  width: auto;
+}
+
+.sign-in-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  font-style: normal;
+  color: #4f4f4f;
+  line-height: 80px;
+}
+
+.sign-in-form {
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20%;
+}
+
+.form-title {
+  color: #fdfdfd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.form-container {
+  padding-top: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .input-label {
+  color: #fdfdfd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.form-container input {
+  height: 45px;
+  width: 350px;
+  border: #aebbf5 solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10%;
+}
+
+.sign-in-button {
+  margin-top: 10%;
+  cursor: pointer;
+  height: 50px;
+  background-image: linear-gradient(to left, #653dfe, #976cff);
+  border: none;
+  border: inherit solid;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.sign-in-button:hover {
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 30px;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+
+.forgot-password a {
+  color: #fdfdfd;
+  text-underline-offset: 2px;
+}
+
+.error-message {
+  color: red;
+}
