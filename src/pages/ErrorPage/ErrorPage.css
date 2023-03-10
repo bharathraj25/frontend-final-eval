@@ -1,0 +1,14 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+p {
+  margin: 10px;
+}
