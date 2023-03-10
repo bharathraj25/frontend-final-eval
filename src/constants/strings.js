@@ -1,0 +1,9 @@
+export const SIGN_IN_TITTLE_1 = "Design API's fast,";
+export const SIGN_IN_TITTLE_2 = 'Manage content easily';
+export const LOGIN_TITLE = 'Login to your CMS+ account';
+export const REGISTER_TITLE = 'Register your new CMS+ account';
+export const FORGOT_PASSWORD = 'Forgot your password?';
+export const REGISTER_HERE = 'Register Here';
+export const LOGIN_HERE = 'Login Here';
+export const CONTENT_NAME = 'Content Name';
+export const NEW_ENTRY = 'Add a New Entry';
