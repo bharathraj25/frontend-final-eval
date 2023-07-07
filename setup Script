@@ -1,0 +1,30 @@
+@here, backend eval directory made easy....
+#!/bin/zsh
+git init
+npm init -y
+npm i express pg pg-hstore sequelize sequelize-cli
+npm i eslint jest --save-dev
+mkdir src
+mkdir tests
+touch src/app.js
+echo 'node_modules' > .gitignore
+git add .
+git commit -m "chore: set up project"
+echo "const path = require('path');\n\nmodule.exports={\nconfig: path.join(__dirname, 'src/database/config/config.json'),\n'migrations-path': path.join(__dirname, 'src/database/migrations'),\n'seeders-path': path.join(__dirname, 'src/database/seeders'),\n'models-path': path.join(__dirname, 'src/database/models'),\n};" | cat > .sequelizerc
+npx sequelize init
+mkdir src/controllers
+mkdir src/services
+mkdir src/routes
+touch src/routes/routes.js
+npx eslint --init
+Steps:
+Open terminal.
+Go to /opt/bin using cd /opt/bin
+Create the bin directory if it doesn't exist in the /opt  directory.
+Create a file say evalScript  and paste the above code in it in the /opt/bin.
+Make it executable using chmod  : sudo chmod 777 ./evalScript  in the same directory.
+Go to home directory using cd ~ .
+Do echo 'PATH=$PATH:/opt/bin' >>  ~/.zshrc
+Do source ./.zshrc  in your home directory.
+Go to your desired folder and run evalScript
+This will create all the folders required and you just start writing your code. (edited) 
