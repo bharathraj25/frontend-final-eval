@@ -1,0 +1,29 @@
+#!/bin/zsh
+git init
+npm init -y
+npm i express pg pg-hstore sequelize sequelize-cli joi axios
+npm i eslint jest --save-dev
+mkdir src
+mkdir tests
+mkdir .vscode
+echo '{\n"eslint.format.enable": true,\n"editor.codeActionsOnSave": {\n"source.fixAll.eslint": true\n}\n}' > .vscode/setting.json
+touch .vscode/launch.json
+touch src/index.js
+touch src/config.js
+touch src/error.js
+echo 'node_modules' > .gitignore
+git add .
+echo '{"env":{"commonjs":true,"es2021":true,"node":true,"jest":true},"extends":"eslint:recommended","overrides":[],"parserOptions":{"ecmaVersion":"latest"},"rules":{"indent":["error",2],"linebreak-style":["error","unix"],"quotes":["error","single"],"semi":["error","always"]}}' > .eslintrc.json
+git commit -m "chore: intial set up for project"
+echo "const path = require('path');\n\nmodule.exports={\nconfig: path.join(__dirname, 'db/config/config.json'),\n'migrations-path': path.join(__dirname, 'db/migrations'),\n'seeders-path': path.join(__dirname, 'db/seeders'),\n'models-path': path.join(__dirname, 'db/models'),\n};" | cat > .sequelizerc
+npx sequelize init
+mkdir src/controllers
+mkdir src/services
+mkdir src/routes
+mkdir tests/controllers
+mkdir tests/services
+mkdir tests/routes
+touch src/routes/index.js
+echo '{"development":{"username":"postgres","password":null,"database":"postgres","host":"127.0.0.1","dialect":"postgres","port":5433},"test":{"username":"postgres","password":null,"database":"postgres","host":"127.0.0.1","dialect":"postgres","port":5433}}' > db/config/config.json
+git add .
+git commit -m "chore: intial db migrations set up"
